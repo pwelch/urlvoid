@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Urlvoid by pwelch</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Urlvoid</h1>
+        <p>Ruby Gem for URLVoid API</p>
+
+        <p class="view"><a href="https://github.com/pwelch/urlvoid">View the Project on GitHub <small>pwelch/urlvoid</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/pwelch/urlvoid/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pwelch/urlvoid/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pwelch/urlvoid">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="urlvoid-api-gem" class="anchor" href="#urlvoid-api-gem" aria-hidden="true"><span class="octicon octicon-link"></span></a>URLVoid API Gem</h1>
+
+<p>Ruby Gem for <a href="http://www.urlvoid.com/api/">URLVoid API</a>.</p>
+
+<p><a href="http://badge.fury.io/rb/urlvoid"><img src="https://badge.fury.io/rb/urlvoid.svg" alt="Gem Version"></a>
+<a href="http://travis-ci.org/pwelch/urlvoid"><img src="https://secure.travis-ci.org/pwelch/urlvoid.svg" alt="Build Status"></a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>urlvoid<span class="pl-pds">'</span></span></pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install urlvoid
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="urlvoid-host-response" class="anchor" href="#urlvoid-host-response" aria-hidden="true"><span class="octicon octicon-link"></span></a>URLVoid Host Response</h3>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>urlvoid<span class="pl-pds">'</span></span>
+
+api_key <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>MY_API_KEY<span class="pl-pds">'</span></span>
+
+urlvoid <span class="pl-k">=</span> <span class="pl-c1">URLVoid</span>::<span class="pl-c1">Host</span>.info(api_key, <span class="pl-s"><span class="pl-pds">'</span>google.com<span class="pl-pds">'</span></span>)
+
+<span class="pl-c"># API Response</span>
+urlvoid.response
+<span class="pl-c"># =&gt;</span>
+{<span class="pl-s"><span class="pl-pds">"</span>details<span class="pl-pds">"</span></span>=&gt;
+  {<span class="pl-s"><span class="pl-pds">"</span>host<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>google.com<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>updated<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>1438544337<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>http_response_code<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>200<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>domain_age<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>874296000<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>google_page_rank<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>9<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>alexa_rank<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>connect_time<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>0.028592<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>header_size<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>840<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>download_size<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>44685<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>speed_download<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>309084<span class="pl-pds">"</span></span>,
+   <span class="pl-s"><span class="pl-pds">"</span>external_url_redirect<span class="pl-pds">"</span></span>=&gt;<span class="pl-c1">nil</span>,
+   <span class="pl-s"><span class="pl-pds">"</span>ip<span class="pl-pds">"</span></span>=&gt;
+    {<span class="pl-s"><span class="pl-pds">"</span>addr<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>216.58.211.78<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>hostname<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>par03s14-in-f14.1e100.net<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>asn<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>15169<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>asname<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>Google Inc.<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>country_code<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>US<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>country_name<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>United States<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>region_name<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>California<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>city_name<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>Mountain View<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>continent_code<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>NA<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>continent_name<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>North America<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>latitude<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>37.4192<span class="pl-pds">"</span></span>,
+     <span class="pl-s"><span class="pl-pds">"</span>longitude<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>-122.057<span class="pl-pds">"</span></span>}},
+ <span class="pl-s"><span class="pl-pds">"</span>detections<span class="pl-pds">"</span></span>=&gt;{<span class="pl-s"><span class="pl-pds">"</span>engines<span class="pl-pds">"</span></span>=&gt;{<span class="pl-s"><span class="pl-pds">"</span>engine<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>PhishTank<span class="pl-pds">"</span></span>}, <span class="pl-s"><span class="pl-pds">"</span>count<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>},
+ <span class="pl-s"><span class="pl-pds">"</span>page_load<span class="pl-pds">"</span></span>=&gt;<span class="pl-s"><span class="pl-pds">"</span>0.00<span class="pl-pds">"</span></span>}
+
+<span class="pl-c"># API Reponse Detections</span>
+urlvoid.detections
+<span class="pl-c"># =&gt;  {"engines"=&gt;{"engine"=&gt;"PhishTank"}, "count"=&gt;"1"}</span></pre></div>
+
+<h3>
+<a id="urlvoid-api-queries-remaining" class="anchor" href="#urlvoid-api-queries-remaining" aria-hidden="true"><span class="octicon octicon-link"></span></a>URLVoid API Queries Remaining</h3>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>urlvoid<span class="pl-pds">'</span></span>
+
+api_key <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>MY_API_KEY<span class="pl-pds">'</span></span>
+
+<span class="pl-c1">URLVoid</span>::<span class="pl-c1">Stats</span>.remaining_queries(api_key)
+<span class="pl-c"># =&gt; 901</span></pre></div>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it ( <a href="https://github.com/pwelch/urlvoid/fork">https://github.com/pwelch/urlvoid/fork</a> )</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pwelch">pwelch</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
