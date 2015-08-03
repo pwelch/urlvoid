@@ -2,6 +2,10 @@
 
 Ruby Gem for [URLVoid API](http://www.urlvoid.com/api/).
 
+[![Gem Version](https://badge.fury.io/rb/urlvoid.svg)](http://badge.fury.io/rb/urlvoid)
+[![Build Status](https://secure.travis-ci.org/pwelch/urlvoid.svg)](http://travis-ci.org/pwelch/urlvoid)
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
