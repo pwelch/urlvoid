@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.urlvoid.com/api1000/testapikey/host/google.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 03 Aug 2015 02:22:31 GMT
+      Content-Type:
+      - text/xml
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <response>
+        <details>
+         <host>google.com</host>
+         <updated>1438544337</updated>
+         <http_response_code>200</http_response_code>
+         <domain_age>874296000</domain_age>
+         <google_page_rank>9</google_page_rank>
+         <alexa_rank>1</alexa_rank>
+         <connect_time>0.028592</connect_time>
+         <header_size>840</header_size>
+         <download_size>44685</download_size>
+         <speed_download>309084</speed_download>
+         <external_url_redirect></external_url_redirect>
+         <ip>
+        <addr>216.58.211.78</addr>
+        <hostname>par03s14-in-f14.1e100.net</hostname>
+        <asn>15169</asn>
+        <asname>Google Inc.</asname>
+        <country_code>US</country_code>
+        <country_name>United States</country_name>
+        <region_name>California</region_name>
+        <city_name>Mountain View</city_name>
+        <continent_code>NA</continent_code>
+        <continent_name>North America</continent_name>
+        <latitude>37.4192</latitude>
+        <longitude>-122.057</longitude>
+         </ip>
+        </details>
+        <detections>
+        <engines>
+         <engine>PhishTank</engine>
+        </engines>
+         <count>1</count>
+        </detections>
+        <page_load>0.00</page_load>
+        </response>
+    http_version:
+  recorded_at: Mon, 03 Aug 2015 02:02:23 GMT
+recorded_with: VCR 2.9.3
