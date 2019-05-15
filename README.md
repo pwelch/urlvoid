@@ -4,6 +4,7 @@ Ruby Gem for [URLVoid API](http://www.urlvoid.com/api/).
 
 [![Gem Version](https://badge.fury.io/rb/urlvoid.svg)](http://badge.fury.io/rb/urlvoid)
 [![Build Status](https://secure.travis-ci.org/pwelch/urlvoid.svg)](http://travis-ci.org/pwelch/urlvoid)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpwelch%2Furlvoid.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpwelch%2Furlvoid?ref=badge_shield)
 
 
 ## Installation
@@ -87,3 +88,7 @@ URLVoid::Stats.remaining_queries(api_key)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpwelch%2Furlvoid.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpwelch%2Furlvoid?ref=badge_large)
