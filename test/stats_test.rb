@@ -14,7 +14,7 @@ class URLVoidStatsTest < Minitest::Test
   def test_queries_remain
     VCR.use_cassette('stats_remain') do
       urlvoid_stats = URLVoid::Stats.remaining_queries(@api_key)
-      assert urlvoid_stats.is_a?(Fixnum)
+      assert urlvoid_stats.is_a?(Integer)
     end
   end
 end
